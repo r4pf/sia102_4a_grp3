@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AthleteHub</title>
+<link rel="stylesheet" href="login_style.css">
+</head>
+<body>
+  <h1>Athlete Logbook System</h1>
+  <h2>Login</h2>
+  <table>
+    <form action="login.php" method="post">  <tr>
+        <td>
+          <label for="idnum">ID Number:</label>
+        </td>
+        <td>
+          <input type="text" id="idnum" name="idnum" placeholder="Enter your id number" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="password">Password:</label>
+        </td>
+        <td>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="role">Role:</label>
+        </td>
+        <td>
+          <select name="role" required>
+            <option value="player">Player</option>
+            <option value="coach">Coach</option>
+          </select>
+        </td>
+      </tr>
+      <tr class="buttons">
+        <td colspan="2">
+          <button type="submit">Submit</button>
+          <button type="reset" class="clear">Clear</button>
+        </td>
+      </tr>
+    </form>
+  </table>
+  <p>Create account <a href="register.php">click here</a></p>
+</body>
+</html>
+<?php
+include 'connection.php';
+session_start();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $idnum = filter_input(INPUT_POST, 'idnum', FILTER_SANITIZE_STRING);
+    $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+    $role = filter_input(INPUT_POST, 'role', FILTER_SANITIZE_STRING);
+
+    $tableName = ($role === 'player')? 'player' : 'coach';
+    $columnName = ($role === 'player')? 'idnum' : 'idnum';
+
+    $sql = $conn->prepare("SELECT * FROM $tableName WHERE $columnName =?");
+    $sql->bind_param("s", $idnum);
+
+    if (!$sql->execute()) {
+        echo "Failed to execute query: ". $sql->error;
+        exit();
+    }
+
+    $result = $sql->get_result();
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        if ($password === $row['password']) {
+            $_SESSION['idnum'] = $idnum;
+            $_SESSION['role'] = $role;
+            if ($role === 'player') {
+              $_SESSION['fname'] = $row['fname'];
+              $_SESSION['lname'] = $row['lname'];
+              $_SESSION['course'] = $row['course'];
+              header('Location: profile-user.php');
+            } elseif ($role === 'coach') {
+                header("Location: homepage-admin.html");
+            }
+            exit();
+        } else {
+            echo "Invalid password.";
+        }
+    } else {
+        echo "No user found with this username.";
+    }
+
+}
+?>
