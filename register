@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<link rel="stylesheet" href="login_style.css">
+</head>
+<body>
+  <h1>Athlete Logbook System</h1> 
+  <h2>Register</h2>
+  <table>
+    <form action="register.php" method="post">
+    <tr>
+        <td>
+          <label for="idnum">ID Number:</label>
+        </td>
+        <td>
+          <input type="text" id="idnum" name="idnum" placeholder="Enter ID Number" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="first name">First name:</label>
+        </td>
+        <td>
+          <input type="text" id="fname" name="fname" placeholder="Enter your first name here" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="last name">Last name:</label>
+        </td>
+        <td>
+          <input type="text" id="lname" name="lname" placeholder="Enter your last name here" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="password">Password:</label>
+        </td>
+        <td>
+          <input type="password" id="password" name="password" placeholder="Enter your password here" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="role">Role</label>
+        </td>
+        <td>
+          <select name="role" required>
+            <option value="player">Player</option>
+            <option value="coach">Coach</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="school">School:</label>
+        </td>
+        <td>
+          <select name="school_name" required>
+            <option value="UBLC">UBLC</option>
+            <option value="DLSL">DLSL</option>
+            <option value="BSU">BSU</option>
+            <option value="NU">NU</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="school">Course:</label>
+        </td>
+        <td>
+          <input type="text" id="course" name="course" placeholder="Enter your course">
+        </td>
+      </tr>
+      <tr class="buttons">
+        <td colspan="2">
+          <button type="submit" name="regbtn">Submit</button>
+          <button type="reset" class="clear">Clear</button>
+        </td>
+      </tr>
+    </form>
+  </table>
+  <p>Already have account <a href="login.php">click here</a></p>
+
+</body>
+</html>
