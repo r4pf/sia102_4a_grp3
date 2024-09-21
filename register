@@ -13,6 +13,14 @@
     <form>
       <tr>
         <td>
+          <label for="idnum">ID Number: <br>* </label>
+        </td>
+        <td>
+          <input type="text" id="idnum" name="idnum" placeholder="Enter ID Number" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
           <label for="first name">First name: <br>*</label>
         </td>
         <td>
@@ -70,7 +78,3 @@
   <p>Already have account <a href="login.html">click here</a></p>
 </body>
 </html>
-
-<script>
-
-</script>
