@@ -3,25 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Registration Form</title>
-<link rel="stylesheet" href="login_style.css">
+<title>uStay</title>
+<link rel="stylesheet" href="reg_style.css">
 </head>
 <body>
-  <h1>Athlete Logbook System</h1> 
+  <h1>uStay House Rental System</h1>
   <h2>Register</h2>
   <table>
-    <form action="register.php" method="post">
-    <tr>
-        <td>
-          <label for="idnum">ID Number:</label>
-        </td>
-        <td>
-          <input type="text" id="idnum" name="idnum" placeholder="Enter ID Number" required>
-        </td>
-      </tr>
+    <form>
       <tr>
         <td>
-          <label for="first name">First name:</label>
+          <label for="first name">First name: <br>*</label>
         </td>
         <td>
           <input type="text" id="fname" name="fname" placeholder="Enter your first name here" required>
@@ -29,7 +21,7 @@
       </tr>
       <tr>
         <td>
-          <label for="last name">Last name:</label>
+          <label for="last name">Last name: <br>*</label>
         </td>
         <td>
           <input type="text" id="lname" name="lname" placeholder="Enter your last name here" required>
@@ -37,7 +29,7 @@
       </tr>
       <tr>
         <td>
-          <label for="password">Password:</label>
+          <label for="password">Password: <br>*</label>
         </td>
         <td>
           <input type="password" id="password" name="password" placeholder="Enter your password here" required>
@@ -45,34 +37,26 @@
       </tr>
       <tr>
         <td>
-          <label for="role">Role</label>
+          <label for="role">Role <br>*</label>
         </td>
         <td>
           <select name="role" required>
-            <option value="player">Player</option>
-            <option value="coach">Coach</option>
+            <option value="player">Landlord</option>
+            <option value="coach">Tenants</option>
           </select>
         </td>
       </tr>
       <tr>
         <td>
-          <label for="school">School:</label>
+          <label for="apartNum">Apartment Number:</label>
         </td>
         <td>
-          <select name="school_name" required>
-            <option value="UBLC">UBLC</option>
-            <option value="DLSL">DLSL</option>
-            <option value="BSU">BSU</option>
-            <option value="NU">NU</option>
-          </select>
+          <input type="text" id="apartNum" name="apartNum" placeholder="Enter Apartment Number">
         </td>
       </tr>
       <tr>
-        <td>
-          <label for="school">Course:</label>
-        </td>
-        <td>
-          <input type="text" id="course" name="course" placeholder="Enter your course">
+        <td colspan="2">
+          <p style="color:red;">* Required</p>
         </td>
       </tr>
       <tr class="buttons">
@@ -83,7 +67,10 @@
       </tr>
     </form>
   </table>
-  <p>Already have account <a href="login.php">click here</a></p>
-
+  <p>Already have account <a href="login.html">click here</a></p>
 </body>
 </html>
+
+<script>
+
+</script>
