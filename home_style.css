@@ -1,0 +1,124 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.label, li{
+    font-size: 18px;
+}
+.container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  .sidebar a{
+    text-decoration: none;
+    color: black;
+  }
+  .main {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .dashboard {
+    display: block;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    width: 200px;
+    height: 200px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  .card a {
+    color: #fff; 
+    text-decoration: none;
+  }
+  
+  .card a:hover {
+    color: #ccc; 
+  }
+  .card i {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .card:nth-child(1) {
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+  }
+  
+  .card:nth-child(2) {
+    background: linear-gradient(to bottom, #f1c40f, #f39c12);
+  }
+  
+  .card:nth-child(3) {
+    background: linear-gradient(to bottom, #2ecc71, #27ae60);
+  }
+  
+  .card:nth-child(4) {
+    background: linear-gradient(to bottom, #e74c3c, #c0392b);
+  }
+  
+  .card:nth-child(5) {
+    background: linear-gradient(to bottom, #9b59b6, #8e44ad);
+  }
+  
+  .card:nth-child(6) {
+    background: linear-gradient(to bottom, #1abc9c, #16a085);
+  }
+  
+  .card:nth-child(7) {
+    background: linear-gradient(to bottom, #16a085, #14907a);
+  }
+  
+  .card:nth-child(8) {
+    background: linear-gradient(to bottom, #27ae60, #25a25a);
+  }
+  .view-details {
+    background-color: #000000;
+    color: #ffffff; 
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .count {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .recent-payments,
+  .payments-not-done {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
