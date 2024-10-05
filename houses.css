@@ -1,0 +1,45 @@
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+.house-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .house {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+  }
+  
+  .house img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .house h2 {
+    font-weight: bold;
+    margin-top: 0;
+  }
+  
+  .house ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .house li {
+    margin-bottom: 10px;
+  }
+  
+  .house li:before {
+    content: "\2713";
+    margin-right: 10px;
+    color: #666;
+  }
