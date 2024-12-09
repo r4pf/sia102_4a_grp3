@@ -4,138 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House List</title>
+    <link rel="stylesheet" href="home_style.css">
     <link rel="stylesheet" href="bed_space.css">
 </head>
 <body>
-    <h1>Bed Space List</h1>
-    <div class="house-list">
-        <div class="house">
-            <img src="bed1.jpg" alt="">
-            <h2>Room #1</h2>
-            <p>Location: Sabang, Lipa City</p>
-            <p>Price: 4000 per month</p>
+    <div id="container">
+        <div class="sidebar">
+            <h1>Rental Management</h1>
             <ul>
-                <li>Wi-Fi</li>
-                <li>TV</li>
-                <li>Kitchen</li>
-                <li>Laundry</li>
+                <a href="home-user.html"><li>Dashboard</li></a>
+                <a href="houses.html"><li>Houses</li></a>
+                <a href="bed_space.html"><li><u>Bed Spacers</u></li></a>
+                <a href="complaints.php"><li>Complaints</li></a>
+                <a href="index.html"><li>Logout</li></a>
             </ul>
-            <h3>Choose Your Bed:</h3>
-            <form>
-                <label>
-                    <input type="radio" name="bed" value="Bed 1" required>
-                    Bed 1 (Not Occupied)
-                </label><br>
-                <label>
-                    <input type="radio" name="bed" value="Bed 2" required>
-                    Bed 2 (Not Occupied)
-                </label><br>
-                <label>
-                    <input type="radio" name="bed" value="Bed 3" required>
-                    Bed 3 (Occupied)
-                </label><br>
-                <label>
-                    <input type="radio" name="bed" value="Bed 4" required>
-                    Bed 4 (Not Occupied)
-                </label><br>
-                <button type="submit">Choose Bed</button>
-            </form>
         </div>
-        <div class="house">
-            <img src="bed2.jpg" alt="">
-            <h2>Room #2</h2>
-            <p>Location: Camella, Lipa City</p>
-            <p>Price: 5000 per month</p>
-            <ul>
-                <li>Wi-Fi</li>
-                <li>TV</li>
-                <li>Kitchen</li>
-                <li>Laundry</li>
-            </ul>
-            <h3>Choose Your Bed:</h3>
-            <form>
-                <label>
-                    <input type="radio" name="bed" value="Bed 1" required>
-                    Bed 1 (Occupied)
-                </label><br>
-                <label>
-                    <input type="radio" name="bed" value="Bed 2" required>
-                    Bed 2 (Not Occupied)
-                </label><br>
-                <label>
-                    <input type="radio" name="bed" value="Bed 3" required>
-                    Bed 3 (Occupied)
-                </label><br>
-                <label>
-                    <input type="radio" name="bed" value="Bed 4" required>
-                    Bed 4 (Not Occupied)
-                </label><br>
-                <button type="submit">Choose Bed</button>
-            </form>
-        </div>
-        <div class="house">
-            <img src="bed3.webp" alt="">
-            <h2>Room #3</h2>
-            <p>Location: Tambo, Lipa City</p>
-            <p>Price: 3500 per month</p>
-            <ul>
-                <li>Wi-Fi</li>
-                <li>TV</li>
-                <li>Kitchen</li>
-                <li>AC</li>
-            </ul>
-            <h3>Choose Your Bed:</h3>
-            <form>
-                <label>
-                    <input type="radio" name="bed" value="Bed 1" required>
-                    Bed 1 (Not Occupied)
-                </label><br>
-                <label>
-                    <input type="radio" name="bed" value="Bed 2" required>
-                    Bed 2 (Occupied)
-                </label><br>
-                <label>
-                    <input type="radio" name="bed" value="Bed 3" required>
-                    Bed 3 (Occupied)
-                </label><br>
-                <label>
-                    <input type="radio" name="bed" value="Bed 4" required>
-                    Bed 4 (Occupied)
-                </label><br>
-                <button type="submit">Choose Bed</button>
-            </form>
-        </div>
-        <div class="house">
-            <img src="bed4.jpg" alt="">
-            <h2>Room #4</h2>
-            <p>Location: Inosluban, Lipa City</p>
-            <p>Price: 4500 per month</p>
-            <ul>
-                <li>Wi-Fi</li>
-                <li>TV</li>
-                <li>Kitchen</li>
-                <li>Laundry</li>
-            </ul>
-            <h3>Choose Your Bed:</h3>
-            <form>
-                <label>
-                    <input type="radio" name="bed" value="Bed 1" required>
-                    Bed 1 (Not Occupied)
-                </label><br>
-                <label>
-                    <input type="radio" name="bed" value="Bed 2" required>
-                    Bed 2 (Not Occupied)
-                </label><br>
-                <label>
-                    <input type="radio" name="bed" value="Bed 3" required>
-                    Bed 3 (Occupied)
-                </label><br>
-                <label>
-                    <input type="radio" name="bed" value="Bed 4" required>
-                    Bed 4 (Not Occupied)
-                </label><br>
-                <button type="submit">Choose Bed</button>
-            </form>
+        <div class="main">
+            <h1>Bed Space List</h1>
+            <div class="house-list">
+                <div class="house">
+                    <img src="bed1.jpg" alt="Room #1" />
+                    <h2>Room #1</h2>
+                    <p>Location: Sabang, Lipa City</p>
+                    <p>Price: 4000 per month</p>
+                    <ul>
+                        <li>Wi-Fi</li>
+                        <li>TV</li>
+                        <li>Kitchen</li>
+                        <li>Laundry</li>
+                    </ul>
+                    <h3>Choose Your Bed:</h3>
+                    <form>
+                        <label>
+                            <input type="radio" name="bed1" value="Bed 1" required>
+                            Bed 1 (Not Occupied)
+                        </label><br>
+                        <label>
+                            <input type="radio" name="bed1" value="Bed 2" required>
+                            Bed 2 (Not Occupied)
+                        </label><br>
+                        <label>
+                            <input type="radio" name="bed1" value="Bed 3" required>
+                            Bed 3 (Occupied)
+                        </label><br>
+                        <label>
+                            <input type="radio" name="bed1" value="Bed 4" required>
+                            Bed 4 (Not Occupied)
+                        </label><br>
+                        <button type="submit">Choose Bed</button>
+                    </form>
+                </div>
+                <div class="house">
+                    <img src="bed2.jpg" alt="Room #2" />
+                    <h2>Room #2</h2>
+                    <p>Location: Camella, Lipa City</p>
+                    <p>Price: 5000 per month</p>
+                    <ul>
+                        <li>Wi-Fi</li>
+                        <li>TV</li>
+                        <li>Kitchen</li>
+                        <li>Laundry</li>
+                    </ul>
+                    <h3>Choose Your Bed:</h3>
+                    <form>
+                        <label>
+                            <input type="radio" name="bed2" value="Bed 1" required>
+                            Bed 1 (Occupied)
+                        </label><br>
+                        <label>
+                            <input type="radio" name="bed2" value="Bed 2" required>
+                            Bed 2 (Not Occupied)
+                        </label><br>
+                        <label>
+                            <input type="radio" name="bed2" value="Bed 3" required>
+                            Bed 3 (Occupied)
+                        </label><br>
+                        <label>
+                            <input type="radio" name="bed2" value="Bed 4" required>
+                            Bed 4 (Not Occupied)
+                        </label><br>
+                        <button type="submit">Choose Bed</button>
+                    </form>
+                </div>
+                <div class="house">
+                    <img src="bed3.webp" alt="Room #3" />
+                    <h2>Room #3</h2>
+                    <p>Location: Tambo, Lipa City</p>
+                    <p>Price: 3500 per month</p>
+                    <ul>
+                        <li>Wi-Fi</li>
+                        <li>TV</li>
+                        <li>Kitchen</li>
+                        <li>AC</li>
+                    </ul>
+                    <h3>Choose Your Bed:</h3>
+                    <form>
+                        <label>
+                            <input type="radio" name="bed3" value="Bed 1" required>
+                            Bed 1 (Not Occupied)
+                        </label><br>
+                        <label>
+                            <input type="radio" name="bed3" value="Bed 2" required>
+                            Bed 2 (Occupied)
+                        </label><br>
+                        <label>
+                            <input type="radio" name="bed3" value="Bed 3" required>
+                            Bed 3 (Occupied)
+                        </label><br>
+                        <label>
+                            <input type="radio" name="bed3" value="Bed 4" required>
+                            Bed 4 (Occupied)
+                        </label><br>
+                        <button type="submit">Choose Bed</button>
+                    </form>
+                </div>
+                <div class="house">
+                    <img src="bed4.jpg" alt="Room #4" />
+                    <h2>Room #4</h2>
+                    <p>Location: Inosluban, Lipa City</p>
+                    <p>Price: 4500 per month</p>
+                    <ul>
+                        <li>Wi-Fi</li>
+                        <li>TV</li>
+                        <li>Kitchen</li>
+                        <li>Laundry</li>
+                    </ul>
+                    <h3>Choose Your Bed:</h3>
+                    <form>
+                        <label>
+                            <input type="radio" name="bed4" value="Bed 1" required>
+                            Bed 1 (Not Occupied)
+                        </label><br>
+                        <label>
+                            <input type="radio" name="bed4" value="Bed 2" required>
+                            Bed 2 (Not Occupied)
+                        </label><br>
+                        <label>
+                            <input type="radio" name="bed4" value="Bed 3" required>
+                            Bed 3 (Occupied)
+                        </label><br>
+                        <label>
+                            <input type="radio" name="bed4" value="Bed 4" required>
+                            Bed 4 (Not Occupied)
+                        </label><br>
+                        <button type="submit">Choose Bed</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </body>

@@ -1,36 +1,43 @@
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.label, li{
-    font-size: 18px;
+
+.label, li {
+  font-size: 18px;
 }
+
 .container {
-    display: flex;
-  }
-  
-  .sidebar {
-    width: 200px;
-    background-color: #f0f0f0;
-    padding: 20px;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .sidebar li {
-    margin-bottom: 10px;
-  }
-  .sidebar a{
-    text-decoration: none;
-    color: black;
-  }
-  .main {
-    flex: 1;
-    padding: 20px;
-  }
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: black;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-left: 200px;
+  height: 100vh;
+}
   
   .dashboard {
     display: block;
